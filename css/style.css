@@ -1,0 +1,445 @@
+/* Import Font Modern dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* General Styling & Background Image */
+body {
+    /* CATATAN: Ganti URL di bawah dengan path gambar yang Anda inginkan */
+    background-image: url('../img/background.jpg'); /* Gambar latar belakang */
+    background-size: cover; /* Membuat gambar menutupi seluruh area */
+    background-position: center; /* Posisi gambar di tengah */
+    background-attachment: fixed; /* Membuat gambar latar tidak ikut scroll */
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins yang modern */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header & Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background-color: rgba(255, 255, 255, 0.95); /* Latar belakang putih semi-transparan agar konten di belakangnya sedikit terlihat */
+    backdrop-filter: blur(8px); /* Efek blur untuk tampilan modern */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky; /* Membuat navbar tetap di atas saat scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    height: 45px;
+    width: auto;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 35px;
+}
+
+.navbar .nav-links a {
+    color: #0056b3; /* Biru gelap untuk teks link */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar .nav-links a:hover {
+    color: #f39c12; /* Aksen Oranye/Kuning saat hover */
+    border-bottom: 2px solid #f39c12;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+    z-index: 1;
+    list-style: none;
+    padding: 8px 0;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #0056b3;
+}
+
+/* Main Content Wrapper */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.85); /* Latar belakang putih transparan untuk area konten utama */
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+#searchInput {
+    width: 60%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 50px 0 0 50px; /* Sudut membulat seperti Gramedia */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #0073e6;
+}
+
+.search-container button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: #0073e6; /* Biru Khas Gramedia */
+    color: white;
+    border: none;
+    border-radius: 0 50px 50px 0; /* Menyambung dengan input */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Book Grid & Item Cards */
+.popular-books-section h2, .section-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #002b4d; /* Biru sangat gelap */
+}
+
+.book-grid, .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.book-item, .article-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover, .article-item:hover {
+    transform: translateY(-10px); /* Efek mengangkat kartu saat di-hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.book-item img, .article-item img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.book-item h3, .article-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.book-item p, .article-item p {
+    color: #666;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+/* Buttons Styling */
+.detail-button, .read-more-button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+    background-color: #0073e6; /* Warna Aksi Primer (Biru) */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.detail-button:hover, .read-more-button:hover {
+    background-color: #0056b3;
+}
+
+.whatsapp-button, .rental-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.whatsapp-button {
+    background-color: #25D366; /* Warna WhatsApp */
+}
+
+.rental-button {
+    background-color: #f39c12; /* Warna Aksen (Oranye/Kuning) */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #002b4d; /* Biru sangat gelap, elegan */
+    color: #f4f4f4;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 3rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.footer-license {
+    font-size: 0.85rem;
+    color: #aaa;
+    border-top: 1px solid #004273;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Detail Page specific styling */
+.book-detail-container {
+    background-color: transparent; /* Hapus latar belakang agar menyatu dengan main */
+    box-shadow: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.book-detail-container img {
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* About Page Styling */
+.about-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.85); /* Latar belakang putih transparan untuk area konten utama */
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.vision-mission-box {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.85); /* Latar belakang putih transparan untuk area konten utama */
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 12px 20px;
+    }
+    .navbar .nav-links {
+        margin-top: 10px;
+        gap: 20px;
+    }
+    #searchInput {
+        width: 70%;
+    }
+    .book-detail-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --- STYLE TAMBAHAN UNTUK GALERI BUKU (DETAIL PAGE) --- */
+
+.gallery-wrapper {
+    display: flex;
+    flex-direction: column; /* Susun vertikal: Gambar utama atas, thumbnail bawah */
+    gap: 15px;
+    width: 300px; /* Lebar area gambar */
+    flex-shrink: 0; /* Agar tidak mengecil saat layar sempit */
+}
+
+/* Gambar Utama */
+.main-preview {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    object-fit: cover;
+    transition: src 0.3s ease;
+}
+
+/* Kontainer Thumbnail */
+.thumbnail-row {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Scroll samping jika thumbnail banyak */
+    padding-bottom: 5px;
+}
+
+/* Gambar Thumbnail Kecil */
+.thumbnail {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.6; /* Sedikit transparan jika tidak disorot */
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Efek saat thumbnail disorot (Hover) */
+.thumbnail:hover {
+    opacity: 1;
+    border-color: #007bff; /* Garis biru saat hover */
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* --- STYLE UNTUK SECTION E-BOOK TERBARU --- */
+
+.ebook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Sedikit lebih lebar dari buku biasa */
+    gap: 2.5rem;
+    padding: 10px;
+}
+
+.ebook-item {
+    background-color: #ffffff;
+    border-radius: 16px; /* Sudut lebih bulat */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Agar gambar tidak keluar dari border-radius */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.ebook-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Wrapper Gambar */
+.ebook-thumb-wrapper {
+    position: relative;
+    height: 220px;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ebook-thumb-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Gambar mengisi penuh area */
+    transition: transform 0.5s ease;
+}
+
+.ebook-item:hover .ebook-thumb-wrapper img {
+    transform: scale(1.05); /* Efek zoom in halus saat hover */
+}
+
+/* Badge 'Baru' */
+.badge-ebook {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff4757;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+/* Konten Text Ebook */
+.ebook-details {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left; /* Text rata kiri agar beda dengan buku biasa */
+}
+
+.ebook-details h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    color: #002b4d;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.ebook-details .ebook-caption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1; /* Mendorong tombol ke bawah */
+}
+
+/* Tombol Detail (Override sedikit untuk E-book) */
+.ebook-details .detail-button {
+    text-align: center;
+    width: fit-content;
+    margin-top: auto; /* Memastikan tombol selalu di bawah */
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+}

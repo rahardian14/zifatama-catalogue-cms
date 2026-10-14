@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="L3N8_1hq3d3h9YWuehg8T31nJX3asz6jG2QbmAjiEME" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <title>Zifatama.co.id</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-container">
+                <img src="img/logo.png" alt="Zifatama Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="kategori.html" class="dropbtn">Kategori &#9662;</a>
+                <ul id="category-dropdown-menu" class="dropdown-content">
+                </ul>
+                </li>
+                <li><a href="about.html">Tentang Kita</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=6281235485066&text=Halo,%20saya%20ingin%20bertanya%20tentang%20buku">Kontak Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Cari berdasarkan judul, kategori, atau ISBN...">
+            <button onclick="redirectToSearchPage()">Cari</button>
+        </div>
+
+        <div class="popular-books-section">
+            <h2>Buku Yang Sedang Populer</h2>
+            <div id="popular-book-list" class="book-grid">
+                </div>
+        </div>
+
+        <section id="article-section" class="section-container">
+            <h2>Artikel Terbaru</h2>
+            <div id="article-list" class="articles-grid">
+                </div>
+        </section>
+
+        <section id="ebook-section" class="section-container">
+            <h2>E-Book Terbaru</h2>
+            <div class="ebook-grid">
+                
+                <div class="ebook-item">
+                    <div class="ebook-thumb-wrapper">
+                        <img src="img/lp/ebook-1.jpg" alt="Cover Ebook 1">
+                        <span class="badge-ebook">Baru</span>
+                    </div>
+                    <div class="ebook-details">
+                        <h3>50 Ide Jualan Ramadan</h3>
+                        <p class="ebook-caption">Panduan lengkap 50 ide dan tata cara agar dapat menjual produk dengan modal kecil dan hasil maksimal selama bulan Ramadan.</p>
+                        <a href="lp/lp-50-ide-jualan-untuk-ramadhan.html" class="detail-button">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="ebook-item">
+                    <div class="ebook-thumb-wrapper">
+                        <img src="img/lp/ebook-2.jpg" alt="Cover Ebook 2">
+                    </div>
+                    <div class="ebook-details">
+                        <h3>Digital Marketing 2026</h3>
+                        <p class="ebook-caption">Strategi pemasaran digital terbaru untuk meningkatkan penjualan bisnis.</p>
+                        <a href="lp/ebook-digital-marketing.html" class="detail-button">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Alamat: </strong>Taman Pondok Jati, Geluran, Kec. Taman, Kab. Sidoarjo, Jawa Timur, 61257</p>
+                <p><strong>Telp: </strong>0812-3548-5066</p>
+                <p><strong>Email: </strong>zifatama1@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-license">
+            &copy; 2025 Penerbit Zifatama. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="js/dataartikel.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <title>Zifatama.co.id</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-container">
+                <img src="img/logo.png" alt="Zifatama Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="kategori.html" class="dropbtn">Kategori &#9662;</a>
+                <ul id="category-dropdown-menu" class="dropdown-content">
+                </ul>
+                </li>
+                <li><a href="about.html">Tentang Kita</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=6281235485066&text=Halo,%20saya%20ingin%20bertanya%20tentang%20buku">Kontak Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Cari berdasarkan judul, kategori, atau ISBN...">
+            <button onclick="searchBooksOnPage()">Cari</button>
+        </div>
+
+        <div id="book-list" class="book-grid">
+            </div>
+
+        <div id="not-found" class="not-found-message" style="display: none;">
+            <p>Maaf, buku yang Anda cari tidak ditemukan.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Alamat: </strong>Taman Pondok Jati, Geluran, Kec. Taman, Kab. Sidoarjo, Jawa Timur, 61257</p>
+                <p><strong>Telp: </strong>0812-3548-5066</p>
+                <p><strong>Email: </strong>zifatama1@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-license">
+            &copy; 2025 Penerbit Zifatama. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
